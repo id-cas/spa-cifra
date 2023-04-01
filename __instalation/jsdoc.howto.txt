@@ -1,0 +1,2 @@
+Start in index directory
+jsdoc public/js -c jsdoc.json

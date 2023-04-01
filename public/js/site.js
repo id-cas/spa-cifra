@@ -312,7 +312,7 @@
 
 	// START APP
 	new App({
-		apiUrl: 'http://cifra.cvvrk.ru/api.php',
+		apiUrl: '/api.php',
 		btnPrevId: 'js-btn-prev',
 		btnNextId: 'js-btn-next',
 		tableId: 'js-table',

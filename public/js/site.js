@@ -239,12 +239,21 @@
 			});
 
 			this.pagination.clickEvent('prev', (type) => {
+				if(this.#getState('page') === 0) {
+					return false;
+				}
 				this.#setState('page', this.#getState('page') - 1);
 				this.#getData();
 			});
 
 			this.pagination.clickEvent('next', (type) => {
 				this.#setState('page', this.#getState('page') + 1);
+
+				if(this.#getState('page') === this.#getState('pages')) {
+					this.#setState('page', this.#getState('page') - 1);
+					return false;
+				}
+
 				this.#getData();
 			});
 
